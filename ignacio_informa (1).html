@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ignacio Informa - Ensayo Argumentativo</title>
+    <style>
+        :root {
+            --primary-color: #0f172a;
+            --accent-color: #2563eb;
+            --text-color: #334155;
+            --bg-color: #f1f5f9;
+            --card-bg: #ffffff;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+        }
+
+        .header-banner {
+            width: 100%;
+            max-height: 380px;
+            overflow: hidden;
+            background-color: #000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .header-banner img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        .container {
+            max-width: 1250px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 30px;
+        }
+
+        @media (max-width: 900px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .main-content {
+            background: var(--card-bg);
+            padding: 45px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        }
+
+        .editor-section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 35px;
+            padding-bottom: 25px;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .editor-img {
+            width: 85px;
+            height: 85px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent-color);
+            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+        }
+
+        .editor-info h3 {
+            font-size: 1.15rem;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .editor-info p {
+            font-size: 0.92rem;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        .titulo-ensayo {
+            font-size: 1.85rem;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            line-height: 1.35;
+            font-weight: 800;
+        }
+
+        .seccion-ensayo {
+            font-size: 1.35rem;
+            color: var(--accent-color);
+            margin-top: 35px;
+            margin-bottom: 15px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 12px;
+            font-weight: 700;
+        }
+
+        .parrafo-ensayo {
+            margin-bottom: 18px;
+            text-align: justify;
+            font-size: 1.05rem;
+        }
+
+        .cita-ensayo {
+            margin: 25px 0;
+            padding: 18px 22px;
+            background-color: #f8fafc;
+            border-left: 4px solid var(--primary-color);
+            font-style: italic;
+            color: #1e293b;
+            border-radius: 0 8px 8px 0;
+            font-size: 1.02rem;
+        }
+
+        .video-section {
+            margin-top: 50px;
+            padding-top: 35px;
+            border-top: 2px solid var(--border-color);
+            text-align: center;
+        }
+
+        .video-section h3 {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: #000;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .video-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+            max-height: 500px;
+        }
+
+        .synthesis-section {
+            margin-top: 40px;
+            padding: 30px;
+            background: #f8fafc;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .synthesis-section h3 {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-weight: 700;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .synthesis-intro {
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+            font-weight: 500;
+            color: #1e293b;
+        }
+
+        .synthesis-list {
+            padding-left: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .synthesis-list li {
+            font-size: 1.02rem;
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        .synthesis-list strong {
+            color: var(--primary-color);
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .sidebar-ad {
+            background: var(--card-bg);
+            padding: 12px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 30px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .sidebar-ad img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header-banner">
+        <img src="https://i.ibb.co/68037k4/image-8368c2.jpg" alt="Ignacio Informa - Banner Principal" crossorigin="anonymous">
+    </header>
+
+    <div class="container">
+        
+        <main class="main-content">
+            
+            <div class="editor-section">
+                <img src="https://i.ibb.co/VWVw4kR/image-831665.jpg" alt="Ignacio - Editor en Jefe" class="editor-img" crossorigin="anonymous">
+                <div class="editor-info">
+                    <h3>Redactado por: Ignacio</h3>
+                    <p>Editor en Jefe - Ignacio Informa</p>
+                </div>
+            </div>
+
+            <h1 class="titulo-ensayo">Ventajas y Desventajas de que la Información y la Comunicación estén en Manos de la Iniciativa Privada en un País en Desarrollo como México</h1>
+            
+            <h2 class="seccion-ensayo">Introducción</h2>
+            <p class="parrafo-ensayo">Hoy en día, la información y la forma en que nos comunicamos son muy importantes. En México, gran parte del internet, las redes sociales y los medios de comunicación están en manos de empresas privadas y no del gobierno. Esto trae cosas buenas, como mejor tecnología y mayor rapidez para conectarnos, pero también provoca problemas, sobre todo para las personas y proyectos que no tienen mucho dinero.</p>
+            <p class="parrafo-ensayo">En este ensayo se habla sobre las ventajas y desventajas de que la iniciativa privada controle la información y la comunicación en un país en desarrollo como México. El enfoque principal está en cómo esto afecta a los proyectos independientes que no cuentan con millones de pesos para invertir.</p>
+
+            <h2 class="seccion-ensayo">Ventajas: mejor tecnología y mayor alcance</h2>
+            <p class="parrafo-ensayo">Una ventaja de que las empresas privadas manejen la comunicación es que pueden invertir mucho dinero en tecnología. El gobierno muchas veces no tiene suficientes recursos ni la rapidez necesaria para instalar cables de fibra óptica en todo el país o crear redes muy rápidas. Por eso, las grandes empresas son las que pueden hacer estas inversiones.</p>
+            <p class="parrafo-ensayo">Gracias a eso, en México existen plataformas que funcionan bien, celulares con internet y redes sociales donde las personas pueden enterarse de las noticias al instante. Las empresas privadas siempre buscan mejorar sus herramientas porque quieren atraer a más clientes. Esto hace que la tecnología avance más rápido en el país.</p>
+            <p class="parrafo-ensayo">Además, las personas y los pequeños negocios pueden usar plataformas que ya están creadas para comunicarse con otras personas. Esto facilita que puedan dar a conocer sus productos, ideas o proyectos sin necesidad de crear todo desde cero. Asimismo, la operación de estas grandes empresas genera una enorme cantidad de empleos y dinamiza la economía formal del país a través de su constante innovación y despliegue masivo.</p>
+
+            <h2 class="seccion-ensayo">Desventajas: el problema de los independientes, costos de operación y asimetrías financieras</h2>
+            <p class="parrafo-ensayo">Aunque hay ventajas, también hay desventajas importantes. Cuando la comunicación depende mucho de empresas privadas con muchos recursos, los proyectos independientes quedan en desventaja porque no tienen el mismo dinero para invertir.</p>
+            <p class="parrafo-ensayo">El primer problema es que las grandes empresas controlan cómo se difunde la información mediante algoritmos y publicidad pagada. Si un medio independiente, un periodista o un creador de contenido quiere compartir algo importante, muchas veces no tiene visibilidad. Esto pasa porque los espacios más grandes los ocupan quienes pueden pagar más. Como resultado, los proyectos pequeños batallan mucho para que la gente los escuche.</p>
+            <p class="parrafo-ensayo">A este panorama se suman las enormes barreras económicas institucionales impuestas para operar en el sector. En los hechos, lo que el gobierno autoriza son licencias caras y limitadas. Como explicó Miguel Ángel Monraz Ibarra, presidente de la Comisión de Radio y Televisión de la Cámara de Diputados:</p>
+            <blockquote class="cita-ensayo">"Es de lo más caro del mundo el espectro en nuestro país. En otros países como Estados Unidos, Europa, América Latina, simplemente pagan una licencia por la administración del espectro; una licencia en Estados Unidos, por ejemplo, en la ciudad de Los Ángeles, se paga cerca de 15 o 20 mil dólares, las más caras, por una licencia".</blockquote>
+            <p class="parrafo-ensayo">Para dimensionar el costo de operar en México fuera del alcance de los independientes, baste señalar que empresas como TV Azteca tuvieron que pagar en 1993 la suma de 642.07 millones de dólares por su concesión, y posteriormente desembolsar otros 3 mil 880.08 millones de pesos únicamente para refrendar 179 de sus estaciones para el periodo 2018-2024. A esto se añade una multimillonaria inversión en antenas e infraestructura, con la particularidad de que la ley estipula que nunca podrán comercializar todo el espacio, ya que deben regalar cientos de minutos al gobierno para su propaganda. Al respecto, el abogado en telecomunicaciones Salomón Padilla menciona:</p>
+            <blockquote class="cita-ensayo">"Esos anuncios, el Estado no paga, el gobierno no paga el anuncio. Dentro de su concesión, me vas a dar tantos minutos y eso implica el costo".</blockquote>
+            <p class="parrafo-ensayo">En drástico contraste con estas cifras multimillonarias, un periodista o creador de contenido independiente en México sobrevive con recursos sumamente limitados, con ingresos promedio que oscilan entre los 8,000 y 11,000 pesos mensuales. Esta asimetría financiera les impide competir en igualdad de circunstancias o adquirir pauta publicitaria frente a los grandes consorcios.</p>
+            <p class="parrafo-ensayo">Otro problema derivado de este modelo es que se le da más atención a los temas grandes y comerciales que generan dinero para sostener dichos costos. Por eso, muchos problemas locales o situaciones que no están tan documentadas quedan ignorados. Por ejemplo, pueden existir situaciones injustas en comunidades o pueblos pequeños, pero no salen en las noticias ni en las redes sociales porque no le interesan a las grandes empresas. Al final, esos problemas reales se quedan invisibles y muchas personas no se enteran de lo que está pasando.</p>
+
+            <h2 class="seccion-ensayo">Conclusión</h2>
+            <p class="parrafo-ensayo">En conclusión, dejar la información y la comunicación en manos de la iniciativa privada en México tiene ventajas y desventajas. Por un lado, las empresas privadas aportan tecnología, inversiones masivas y una red más rápida que ayuda a que las personas se comuniquen mejor.</p>
+            <p class="parrafo-ensayo">Por otro lado, los proyectos independientes y los periodistas que operan con ingresos mensuales limitados (entre 8,000 y 11,000 pesos) quedan en una gran desventaja frente a un mercado caracterizado por costos de concesión altísimos —muy superiores a los de Estados Unidos o Europa— y obligaciones de tiempos oficiales gratuitos. Les cuesta mucho más trabajo hacerse escuchar porque las grandes empresas controlan la publicidad, los algoritmos y los espacios de difusión.</p>
+            <p class="parrafo-ensayo">También se pierde la variedad de opiniones porque muchos problemas locales no reciben la misma atención que los temas comerciales. Por todo ello, resulta indispensable reflexionar sobre la necesidad de un equilibrio regulatorio que permita democratizar el acceso y ofrecer un piso más justo para las voces independientes.</p>
+
+            <div class="video-section">
+                <h3>El siguiente video explica esta síntesis</h3>
+                <div class="video-container">
+                    <video controls preload="metadata">
+                        <source src="WhatsApp Video 2026-11-10 at 12.59.52 AM.mp4" type="video/mp4">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
+                </div>
+            </div>
+
+            <section class="synthesis-section">
+                <h3>Síntesis del texto</h3>
+                <p class="synthesis-intro">En México, el control del internet, las redes sociales y los medios por parte de la iniciativa privada genera un contraste directo entre la modernización tecnológica y la desigualdad competitiva:</p>
+                
+                <ol class="synthesis-list">
+                    <li><strong>Ventajas:</strong> Las empresas privadas garantizan inversiones masivas y ágiles que el Estado no puede costear, impulsando el desarrollo de infraestructura avanzada (fibra óptica), conectividad digital rápida y la dinamización de la economía a través de la innovación y la generación de empleos.</li>
+                    <li><strong>Desventajas:</strong> Este modelo genera asimetrías financieras extremas. Mientras que los grandes consorcios enfrentan altos costos de operación y concesiones multimillonarias, los periodistas y creadores independientes (con ingresos muy limitados de entre 8,000 y 11,000 pesos mensuales) quedan marginados debido al control de los algoritmos, la publicidad pagada y las barreras de entrada. Esto provoca que los problemas de las comunidades locales e independientes queden invisibilizados frente a los contenidos comerciales masivos.</li>
+                </ol>
+            </section>
+
+        </main>
+
+        <aside class="sidebar">
+            <div class="sidebar-ad">
+                <img src="https://i.ibb.co/3Wk2C6N/image-83168b.jpg" alt="El mundo informa - Anuncio lateral" crossorigin="anonymous">
+            </div>
+        </aside>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("Ignacio Informa cargado con éxito.");
+        });
+    </script>
+</body>
+</html>
